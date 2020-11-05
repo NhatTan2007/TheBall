@@ -1,0 +1,45 @@
+#the_ball{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 200px; 
+}
+#bntControl{
+    position: absolute;
+    left: 20px;
+    bottom:20px;
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    border-radius: 500%;
+    background-color: rgba(233, 233, 233, 0.568);
+}
+
+#bntControl button{
+    width: 40px;
+    height: 40px;
+    background-color: rgb(228, 228, 228);
+}
+
+#bntUp{
+    position: absolute;
+    top: 10px;
+    left: 55px;
+}
+#bntDown{
+    position: absolute;
+    top: 100px;
+    left: 55px;
+}
+#bntLeft{
+    position: absolute;
+    top: 55px;
+    left: 10px;
+
+}
+#bntRight{
+    position: absolute;
+    top: 55px;
+    left: 100px;
+}
