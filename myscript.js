@@ -21,10 +21,10 @@ function moving (x,y){
     PosX += x;
     PosY += y;
     if (x > 0 | y > 0){
-        rotate += 5;
+        rotate += 20;
     }
         else{
-            rotate -= 5;
+            rotate -= 20;
         }
     // if (PosX < 0){
     //     PosX = 0;
@@ -61,21 +61,21 @@ function updatePos(){
 
 function moveright(){
     if (PosX + parseInt(the_ball.style.width) < innerWidth){
-        moving(10,0);
+        moving(30,0);
     }
 };
 function moveleft(){
     if (PosX > 0){
-        moving(-10,0);
+        moving(-30,0);
     }
 };
 function moveup(){
     if (PosY > 0){
-        moving(0,-10);
+        moving(0,-30);
     }
 };
 function movedown(){
     if (PosY + parseInt(the_ball.style.height) < innerHeight){
-        moving(0,10);
+        moving(0,30);
     }
 };
