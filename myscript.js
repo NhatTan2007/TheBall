@@ -1,7 +1,6 @@
 var PosX = 0;
 var PosY = 0;
 var rotate = 5;
-
 // Move the ball
 document.getElementById("bntUp").addEventListener("mousedown",moveup);
 document.getElementById("bntDown").addEventListener("mousedown",movedown);
@@ -26,29 +25,6 @@ function moving (x,y){
         else{
             rotate -= 20;
         }
-    // if (PosX < 0){
-    //     PosX = 0;
-    // }
-    //     else{
-    //         if (PosX > window.innerWidth){
-    //             PosX = window.innerWidth;
-    //         }
-    //             else{
-    //                 PosX += x;
-    //             };
-    //     };
-
-    // if (PosY < 0){
-    //     PosY = 0;
-    // }
-    //     else{
-    //         if (PosY > window.innerHeight){
-    //             PosY = window.innerHeight;
-    //         }
-    //             else{
-    //                 PosY += y;
-    //             };
-    //     };
     updatePos();
 }
 
@@ -61,21 +37,37 @@ function updatePos(){
 
 function moveright(){
     if (PosX + parseInt(the_ball.style.width) < innerWidth){
-        moving(30,0);
+        let speed = 30;
+        if (innerWidth - PosX - parseInt(the_ball.style.width) < speed) {
+            speed = innerWidth - PosX - parseInt(the_ball.style.width);
+        }
+        moving(speed,0);
     }
 };
 function moveleft(){
     if (PosX > 0){
-        moving(-30,0);
+        let speed = 30;
+        if (PosX < speed) {
+            speed = PosX;
+        }
+        moving(-speed,0);
     }
 };
 function moveup(){
     if (PosY > 0){
-        moving(0,-30);
+        let speed = 30;
+        if (PosY < speed) {
+            speed = PosY;
+        }
+        moving(0,-speed);
     }
 };
 function movedown(){
     if (PosY + parseInt(the_ball.style.height) < innerHeight){
-        moving(0,30);
+        let speed = 30;
+        if (innerHeight - PosY - parseInt(the_ball.style.height) < speed) {
+            speed = innerHeight - PosY - parseInt(the_ball.style.height);
+        }
+        moving(0,speed);
     }
 };
